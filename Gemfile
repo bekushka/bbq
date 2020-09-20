@@ -8,6 +8,7 @@ gem 'webpacker', '~> 4.0'
 gem 'uglifier'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'jquery-rails'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do
   gem 'sqlite3'
