@@ -3,21 +3,21 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
-gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
-gem 'webpacker', '~> 4.0'
-gem 'uglifier'
-gem 'bootsnap', '>= 1.4.2', require: false
-gem 'jquery-rails'
-gem 'twitter-bootstrap-rails'
 gem 'devise'
-
-group :development, :test do
-  gem 'sqlite3'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
+gem 'devise-i18n'
+gem 'puma', '~> 4.1'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
+gem 'rails-i18n'
+gem 'twitter-bootstrap-rails'
+gem 'webpacker', '~> 4.0'
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'listen', '~> 3.2'
+  gem 'sqlite3', '~> 1.4'
+end
+
+group :production do
+  gem 'pg', '~>1.2.3'
 end
 

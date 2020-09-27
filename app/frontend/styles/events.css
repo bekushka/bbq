@@ -1,3 +1,8 @@
+/*
+(с) goodprogrammer.ru
+Наши дополнительные стили для красивого оформления плитки событий
+ */
+
 .event-info {
   position: relative;
   color: white;
@@ -9,13 +14,13 @@
   position: absolute;
   width: 100%;
   z-index: -1;
-
+  
   top: 0; bottom: 0;
   left: 0; right: 0;
-
+  
   background-size: cover;
   background-position: center;
-
+  
   filter: blur(5px);
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);

@@ -1,10 +1,11 @@
+<%# Универсальный паршиал отображения ошибок валидации любой модели %>
 <% errors = model.errors %>
 
 <% if errors.any? %>
-  <div class="alert alert-danger">
-    <div class="lead buffer-bottom">
-      В вашей форме <%= errors.count %> ошибок
-    </div>
+  <div class="alert alert-danger" role="alert">
+<!--    <div class="lead buffer-bottom">-->
+<!--      В вашей форме <%#= errors.count %> ошибок-->
+<!--    </div>-->
 
     <ul>
       <% errors.full_messages.each do |message| %>

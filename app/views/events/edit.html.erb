@@ -1,6 +1,14 @@
-<h1>Editing Event</h1>
+<h1>Редактирование события</h1>
 
-<%= render 'form', event: @event %>
+<div class="row">
+  <div class="col-md-6 buffer-top">
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+    <%= render 'form' %>
+  </div>
+</div>
+<% if current_user_can_edit?(@event) %>
+  <div class="buffer-top">
+    <%= link_to t('links.destroy_event_button'), event_path(@event), data: { confirm: t('links.destroy_event') },
+                method: :delete, class: 'btn btn-danger my-2' %>
+  </div>
+<% end %>
