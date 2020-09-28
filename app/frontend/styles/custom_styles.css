@@ -42,6 +42,6 @@
 
 .image-for-bg {
   /*background-image: url("../images/event.jpg");*/
-  background-image: url("~images/event.jpg");
+  background-image: url("../images/event.jpg");
   background-size: 100% auto;
 }
