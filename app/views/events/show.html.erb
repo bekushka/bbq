@@ -16,7 +16,7 @@
           <% if current_user_can_edit?(@event) %>
             <div class="buffer-top">
               <%= link_to t('links.change'), edit_event_path(@event),
-                          class: 'btn btn-info my-1' %>
+                          class: 'btn btn-success my-1' %>
             </div>
           <% end %>
         </div>

@@ -26,7 +26,7 @@
 <body class="bg-light" style="font-family: 'Alegreya', serif">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
-  <%= link_to 'PartyHub', root_path, class: 'navbar-brand' %>
+  <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
   <ul class="navbar-nav ml-auto mr-5">
     <% if user_signed_in? %>
       <li><%= link_to 'Профиль', current_user, class: 'mr-2 mb-1 btn btn-success' %></li>
@@ -53,7 +53,7 @@
 
 <footer class="fixed-bottom text-light bg-dark">
   <div class="container text-center">
-    <span>&copy;2020</span>
+    <span>&copy; <%= t'app.company' %></span>
   </div>
 </footer>
 </body>
