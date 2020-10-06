@@ -10,6 +10,8 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 gem 'rails-i18n'
 gem 'twitter-bootstrap-rails'
 gem 'webpacker', '~> 4.0'
+gem 'carrierwave'
+gem 'rmagick'
 
 group :development do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
