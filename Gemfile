@@ -12,6 +12,7 @@ gem 'twitter-bootstrap-rails'
 gem 'webpacker', '~> 4.0'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog-aws'
 
 group :development do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
