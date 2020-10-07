@@ -2,6 +2,8 @@ class Subscription < ApplicationRecord
   belongs_to :event
   belongs_to :user, optional: true
 
+  scope :persisted, -> { where('id IS NOT NULL') }
+
   validates :event, presence: true
 
   validates :user_name, presence: true, unless: -> { user.present? }

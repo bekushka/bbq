@@ -1,0 +1,13 @@
+<div class="event-photo buffer-both">
+  <% image_title = "#{t('photo.photo.added')} #{render partial: 'users/user', object: photo.user}" %>
+  <% if current_user_can_edit?(photo) %>
+    <% image_title += link_to fa_icon('trash'), event_photo_path(photo.event, photo),
+                              method: :delete, data: { confirm: t('links.delete_photo') } %>
+  <% end %>
+
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url,
+              data: {
+                  lightbox: "event-photos",
+                  title: image_title
+              } %>
+</div>
