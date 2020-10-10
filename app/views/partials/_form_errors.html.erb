@@ -2,8 +2,8 @@
 
 <% if errors.any? %>
   <div class="alert alert-danger" role="alert">
-    <div class="lead buffer-bottom">-->
-      <%= t(:errors, count: errors.count) %>
+    <div class="lead buffer-bottom">
+      В вашей форме <%= I18n.t("errors_count", count: errors.count) %>
     </div>
 
     <ul>
