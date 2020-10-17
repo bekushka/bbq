@@ -25,6 +25,7 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+        pincode: 'Пинкод доступа'
 
       comment:
         body: 'Комментарий'
@@ -39,6 +40,7 @@ ru:
       created: 'Вы создали новое событие'
       updated: 'Вы обновили событие'
       destroyed: 'Вы удалили событие :('
+      wrong_pincode: 'Неверный пинкод!'
     users:
       updated: 'Вы обновили свой профиль'
     comments:
@@ -81,6 +83,15 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+    photo:
+      title: 'Новое фото'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+      subject: 'Новое фото'
 
   no_self_subscription: 'Вы не можете подписаться на своё же событие'
 

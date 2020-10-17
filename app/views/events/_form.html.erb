@@ -22,6 +22,12 @@
     <%= f.text_area :description, class: 'form-control' %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :pincode %>
+    <%= f.text_field :pincode, class: 'form-control' %>
+  </div>
+
+
   <div class="actions my-1">
     <%= f.submit 'Сохранить', class: 'btn btn-info' %>
     или <%= link_to 'Вернуться', :back, class: 'btn btn-info' %>
