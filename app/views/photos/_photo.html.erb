@@ -5,9 +5,11 @@
                               method: :delete, data: { confirm: t('links.delete_photo') } %>
   <% end %>
 
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url,
-              data: {
-                  lightbox: "event-photos",
-                  title: image_title
-              } %>
+  <% if photo.photo.thumb.url %>
+    <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url,
+                data: {
+                    lightbox: "event-photos",
+                    title: image_title
+                } %>
+  <% end %>
 </div>

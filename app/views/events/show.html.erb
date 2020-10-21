@@ -32,7 +32,7 @@
     </div>
 
     <div class="event-photos">
-      <div class="event-photos-gallery">
+      <div class="event-photos-gallery border-bottom my-2">
         <div class="row">
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
