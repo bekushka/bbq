@@ -68,10 +68,10 @@ ru:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
-  photos:
+  photo:
     photo:
-      loaded: Добавлена
-      delete: Удалить
+      added: 'Добавлена'
+
 
   event_mailer:
     comment:

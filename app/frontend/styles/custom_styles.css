@@ -11,11 +11,12 @@
 .buffer-both {
   margin-top: 20px;
   margin-bottom: 20px;
+  display: inline-block;
 }
 
 /* Avatars for users & events */
 .img-icon, .img-icon-small {
-  height: 50px;
+  height: 20px;
   width: auto;
   border-radius: 50%;
 }
@@ -44,4 +45,9 @@
   /*background-image: url("../images/event.jpg");*/
   background-image: url("../images/event.jpg");
   background-size: 100% auto;
+}
+
+.user-avatar .img-icon {
+  margin-top: -2px;
+  height: 30px;
 }
