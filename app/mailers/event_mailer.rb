@@ -12,6 +12,14 @@ class EventMailer < ApplicationMailer
     @comment = comment
     @event = event
 
-    mail to: email, subject: "Новый комментарий @ #{event.title}"
+    mail to: email, subject: "#{t('event_mailer.comment.subject')} @ #{event.title}"
+  end
+
+  def photo(event, photo, email)
+    @event = event
+    @photo = photo
+    @email = email
+
+    mail to: email, subject: "#{t('event_mailer.photo.subject')} #{event.title}"
   end
 end
