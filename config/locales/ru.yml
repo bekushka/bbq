@@ -98,7 +98,7 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
-      subject: 'Новое фото'
+      subject: 'Новое фото %{title}'
 
   no_self_subscription: 'Вы не можете подписаться на своё же событие'
 
