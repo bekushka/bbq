@@ -1,12 +1,10 @@
-<%= t '.title' %>
+Новая подписка
 ----
 
-<%= t '.author' %>: <%= @name %>
-<%= t '.email' %>:  <%= @email %>
+Имя: <%= @name %>
+Email: <%= @email %>
 
-----------------------
-
-<%= t '.event' %>: <%= @event.title %>
-<%= t '.datetime' %>: <%= l @event.datetime %>
-<%= t '.owner' %>: <%= @event.user.name %>
+---------------------
+Событие: <%= @event.title %>
+Организатор: <%= @event.user.name %>
 
