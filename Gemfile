@@ -18,6 +18,7 @@ group :development do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'listen', '~> 3.2'
   gem 'sqlite3', '~> 1.4'
+  gem 'letter_opener'
 end
 
 group :production do
