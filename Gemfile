@@ -11,7 +11,7 @@ gem 'rails-i18n'
 gem 'twitter-bootstrap-rails'
 gem 'webpacker', '~> 4.0'
 gem 'carrierwave'
-gem 'rmagick'
+gem 'rmagick', '~> 4.1.2'
 gem 'fog-aws'
 
 group :development do
