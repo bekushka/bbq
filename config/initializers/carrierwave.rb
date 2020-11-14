@@ -1,6 +1,6 @@
 require 'carrierwave/storage/fog'
 
-if Rails.env.production?
+#if Rails.env.production?
   CarrierWave.configure do |config|
     config.fog_provider = 'fog/aws'
     config.fog_credentials = {
@@ -12,4 +12,3 @@ if Rails.env.production?
 
     config.fog_directory  = ENV['S3_BUCKET_NAME']
   end
-end
