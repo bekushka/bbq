@@ -21,12 +21,11 @@ group :development do
   gem 'sqlite3', '~> 1.4'
   gem 'letter_opener'
 
-  gem 'capistrano', '~> 3.14.1'
+  gem 'capistrano', '~> 3.14.1', require: false
   gem 'capistrano-rails', '~> 1.6.1'
   gem 'capistrano-passenger', '~> 0.2'
   gem 'capistrano-rbenv', '~> 2.2'
   gem 'capistrano-bundler', '~> 2.0.1'
-  gem 'capistrano-resque', require: false
 end
 
 group :production do
