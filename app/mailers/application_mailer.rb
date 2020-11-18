@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'partyhub@gmail.com'
+  default from: 'party-hub@party-hub.ru'
   layout 'mailer'
 end
