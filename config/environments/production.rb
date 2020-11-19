@@ -87,7 +87,7 @@ Rails.application.configure do
 
   #config.action_mailer.default_url_options = { host: 'party-hub.ru' }
   #config.action_mailer.default_options = {from: 'Admin <party-hub@party-hub.ru>'}
-  #config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.delivery_method = :sendmail
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
   # middleware. The `delay` is used to determine how long to wait after a write
@@ -109,11 +109,11 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  #config.action_mailer.default_url_options = { host: 'party-hub.ru' }
-  #config.action_mailer.raise_delivery_errors = false
-  #config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host: 'party-hub.ru' }
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.perform_deliveries = true
 
-  #config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
   
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
