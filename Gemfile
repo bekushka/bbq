@@ -22,10 +22,11 @@ group :development do
   gem 'letter_opener'
 
   gem 'capistrano', '~> 3.14.1', require: false
-  gem 'capistrano-rails', '~> 1.6.1'
-  gem 'capistrano-passenger', '~> 0.2'
-  gem 'capistrano-rbenv', '~> 2.2'
-  gem 'capistrano-bundler', '~> 2.0.1'
+  gem 'capistrano-rails', '~> 1.6.1', require: false
+  gem 'capistrano-passenger', '~> 0.2', require: false
+  gem 'capistrano-rbenv', '~> 2.2', require: false
+  gem 'capistrano-bundler', '~> 2.0.1', require: false
+  gem 'capistrano3-puma',   require: false
 end
 
 group :production do
