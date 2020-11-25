@@ -28,9 +28,9 @@ set :deploy_to, "/home/deploy/www/party-hub"
 append :linked_files, "config/database.yml.example", "config/database.yml", "config/secrets.yml.example", "config/secrets.yml", ".env", "config/master.key"
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"  #"vendor/bundler", "public/uploads"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor/bundler", "public/uploads"
 
-after "deploy:restart", "resque:restart"
+#after "deploy:restart", "resque:restart"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
