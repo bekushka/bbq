@@ -25,7 +25,7 @@ set :deploy_to, "/home/deploy/www/party-hub"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml.example", "config/secrets.yml.example", ".env", "config/master.key"
+append :linked_files, "config/database.yml.example", "config/database.yml", "config/secrets.yml.example", "config/secrets.yml", ".env", "config/master.key"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundler", "public/system", "public/uploads"
