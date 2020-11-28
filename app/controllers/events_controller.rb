@@ -1,15 +1,19 @@
 class EventsController < ApplicationController
   # Задаем объект @event для тех действий, где он нужен
   before_action :authenticate_user!, except: %i[show index]
-  before_action :set_event, only: %i[show]
+  before_action :set_event, only: :show
   before_action :set_current_user_event, only: %i[edit update destroy]
   before_action :password_guard!, only: [:show]
 
+  after_action :verify_authorized, only: %i[show edit update destroy]
+  after_action :verify_policy_scoped, only: :index
+
   def index
-    @events = Event.all
+    @events = policy_scope(Event)
   end
 
   def show
+    authorize @event
     @new_comment = @event.comments.build(params[:comment])
     @new_subscription = @event.subscriptions.build(params[:subscription])
     @new_photo = @event.photos.build(params[:photo])
@@ -17,12 +21,16 @@ class EventsController < ApplicationController
 
   def new
     @event = current_user.events.build
+    authorize @event
   end
 
-  def edit; end
+  def edit
+    authorize @event
+  end
 
   def create
     @event = current_user.events.build(event_params)
+    authorize @event
 
     if @event.save
       redirect_to @event, notice: I18n.t('controllers.events.created')
@@ -32,6 +40,7 @@ class EventsController < ApplicationController
   end
 
   def update
+    authorize @event
     if @event.update(event_params)
       redirect_to @event, notice: I18n.t('controllers.events.updated')
     else
@@ -40,6 +49,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    authorize @event
     @event.destroy
     redirect_to events_url, notice: I18n.t('controllers.events.destroyed')
   end
