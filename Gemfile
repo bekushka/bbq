@@ -15,6 +15,7 @@ gem 'pundit'
 gem 'carrierwave'
 gem 'rmagick', '~> 4.1.2'
 gem 'fog-aws'
+gem 'resque'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
