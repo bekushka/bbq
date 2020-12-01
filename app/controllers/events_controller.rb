@@ -20,7 +20,6 @@ class EventsController < ApplicationController
 
   def new
     @event = current_user.events.build
-    authorize @event
   end
 
   def edit
@@ -67,10 +66,6 @@ class EventsController < ApplicationController
       flash.now[:alert] = I18n.t('controllers.events.wrong_pincode') if params[:pincode].present?
       render 'password_form'
     end
-  end
-
-  def set_current_user_event
-    @event = current_user.events.find(params[:id])
   end
 
   def set_event
