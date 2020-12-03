@@ -20,6 +20,7 @@ class EventsController < ApplicationController
 
   def new
     @event = current_user.events.build
+    authorize @event
   end
 
   def edit
