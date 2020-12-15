@@ -101,6 +101,8 @@ ru:
       subject: 'Новое фото %{title}'
 
   no_self_subscription: 'Вы не можете подписаться на своё же событие'
+  pundit:
+    not_authorized: 'Вам нельзя это делать!'
 
   errors:
     format: "%{attribute} %{message}"
@@ -171,3 +173,4 @@ ru:
     send: Отправить
     subscribe: Подписаться
     delete_photo: Удалить фотографию?
+    sign_in_with: "Войти с помощью %{provider}"

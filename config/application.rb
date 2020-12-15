@@ -34,5 +34,11 @@ module BBQ
     config.i18n.locale = :ru
 
     config.i18n.fallbacks = [:en]
+
+    config.generators.system_tests = nil
+
+    config.generators do |g|
+      g.fixture_replacement :factory_bot, dir: 'spec/factories'
+    end
   end
 end
